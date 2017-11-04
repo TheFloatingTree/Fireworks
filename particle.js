@@ -23,7 +23,7 @@ function particleObject(x,y,size,ang,vel,veldecay,life,lifedecay,type,red,green,
     this.render = function() {
         if (type === "square") {
             noStroke();
-            fill(255,this.lifespan);
+            fill(this.color.r,this.color.g,this.color.b,this.lifespan);
             rect(this.pos.x,this.pos.y,this.size,this.size);
         }
         if (type === "circle") {
