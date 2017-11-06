@@ -53,7 +53,7 @@ function firework (x,y) { //EXPLOSION PARTICLE -- Makes an explosion at a specif
             this.angle = random(0,2*PI);
             this.size = random(4,7);
             
-            particles.push(new particleObject(this.pos.x,this.pos.y,this.size,this.angle,this.vel,0.9,255,this.lifedecay,"circle",this.color.r,this.color.g,this.color.b));
+            particles.push(new particleObject(this.pos.x,this.pos.y,this.size,this.angle,this.vel,0.9,255,this.lifedecay,"circle",this.color.r,this.color.g,this.color.b,true));
             particles[particles.length - 1].direction();
         }
     }
