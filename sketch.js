@@ -31,3 +31,9 @@ function draw() {
     pM.update();
 
 }
+
+function windowResized() {
+    cSize.x = windowWidth;
+    cSize.y = windowHeight;
+    resizeCanvas(cSize.x,cSize.y);
+}

@@ -2,7 +2,7 @@ function particleObject(x,y,size,ang,vel,veldecay,life,lifedecay,type,red,green,
     this.pos = createVector(x,y);                                           // used by particle systems to create effects
     this.vel = createVector(0,0);         
     this.acc = createVector(0,0);                                  // ARGUMENT LIST:
-    this.heading = ang;                                                     //x,y,size,ang1,ang2,vel,veldecay,life,lifedecay
+    this.heading = ang;                                                     //x,y,size,ang1,ang2,vel,veldecay,life,lifedecay,type,r,g,b,gravity
     this.size = size;
     this.lifespan = life;
     this.color = {r: red, g: green, b: blue};

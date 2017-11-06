@@ -43,6 +43,14 @@ function firework (x,y) { //EXPLOSION PARTICLE -- Makes an explosion at a specif
     this.colors = [255,0];
     this.color = {r:this.colors[Math.round(random(0,this.colors.length - 1))],g:this.colors[Math.round(random(0,this.colors.length - 1))],b:this.colors[Math.round(random(0,this.colors.length - 1))]};
     this.numPar = random(8,20);
+
+    while (this.color.r === 0 && this.color.g === 0 && this.color.b === 0) {
+        this.color = {r:this.colors[Math.round(random(0,this.colors.length - 1))],g:this.colors[Math.round(random(0,this.colors.length - 1))],b:this.colors[Math.round(random(0,this.colors.length - 1))]};
+    }
+
+    while (this.color.r === 255 && this.color.g === 255 && this.color.b === 255) {
+        this.color = {r:this.colors[Math.round(random(0,this.colors.length - 1))],g:this.colors[Math.round(random(0,this.colors.length - 1))],b:this.colors[Math.round(random(0,this.colors.length - 1))]};
+    }
     
     this.spawn = function() {
         pM.particleAlive = true;
