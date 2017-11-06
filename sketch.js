@@ -5,10 +5,10 @@ let fireworks = [];
 let pM;
 
 function setup() {
-    // cSize.x = windowWidth;
-    // cSize.y = windowHeight;
-    cSize.x = 400;
-    cSize.y - 400;
+    cSize.x = windowWidth;
+    cSize.y = windowHeight;
+    // cSize.x = 400;
+    // cSize.y = 400;
 
     createCanvas(cSize.x,cSize.y);
 

@@ -5,15 +5,10 @@ function particleObject(x,y,size,ang,vel,veldecay,life,lifedecay,type,red,green,
     this.heading = ang;                                                     //x,y,size,ang1,ang2,vel,veldecay,life,lifedecay
     this.size = size;
     this.lifespan = life;
-    // console.log(red,green,blue);
     this.color = {r: red, g: green, b: blue};
     this.gravity = gravity;
     
     this.direction = function() {
-        if (this.gravity) {
-            this.vel.add(this.acc);
-        }
-
         var force = p5.Vector.fromAngle(this.heading);
         this.vel.add(force.mult(vel));
     }
@@ -40,10 +35,13 @@ function particleObject(x,y,size,ang,vel,veldecay,life,lifedecay,type,red,green,
     }
     
     this.update = function() {
+        if (this.gravity) {
+            this.acc.y += 0.004;
+            this.vel.add(this.acc);
+        }
         this.pos.add(this.vel);
         this.vel.mult(veldecay);
         this.lifespan -= lifedecay;
-        this.acc.y += 0.01;
     }
     
 }
